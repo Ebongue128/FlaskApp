@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>{% block title %} Welcome to our home page {% endblock %}</h1>
+    <a href="#">
+        <h2>{{ nb }} visit(s)</h2>
+    </a>
+    <hr>
+    {% for visit in visits %}
+        <span class="badge badge-primary">{{ visit['visited'] }}</span>
+        <hr>
+    {% endfor %}
+{% endblock %}
